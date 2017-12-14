@@ -1,0 +1,69 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.list-item {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #bdbdbe;
+    color: rgba(225,225,225,.8);
+    overflow: hidden;
+    border-bottom: r1px solid rgba(150,150,150,.1);
+    cursor: default;
+    position: relative;
+}
+/* 列表数字 */
+.list-num {
+    display: block;
+    width: 30rpx;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+/* 音乐名字 */
+.music-name {
+    width:30%;
+    float: left;
+    position: relative;
+    display: block;
+    /* width: auto; */
+    margin-left: 40rpx;
+    margin-right: 300rpx;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none; /*禁止双击选定*/
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* 作者名称与音乐专辑 */
+.auth-name,.music-album {
+    position: relative;
+    display: block;
+    width: 150rpx;
+    float: left;
+    height: 100%;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
