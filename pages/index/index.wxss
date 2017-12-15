@@ -13,7 +13,7 @@
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  color: #fce8b3;
 }
 
 .usermotto {
@@ -24,8 +24,7 @@
     width: 100%;
     height: 50rpx;
     line-height: 50rpx;
-    color: #bdbdbe;
-    color: rgba(225,225,225,.8);
+    color: #36474f;
     overflow: hidden;
     border-bottom: r1px solid rgba(150,150,150,.1);
     cursor: default;
@@ -66,4 +65,88 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/*zxf css*/
+
+.container{
+  position: absolute;
+   /* background: #214e62;  */
+   /* background:#f78b16;  */
+   background: #333; 
+  width: 100%;
+  height:100%;
+  top:0;
+}
+.banner{
+  display: block;
+  width: 100%;
+  height:590rpx;
+  margin:0 auto;
+  /* background: rgba(0,0,0,1); */
+  /* opacity: 0.4; */
+}
+.form{
+  width:100%;
+  position: fixed;
+  top:10%;
+  left:0;
+}
+.form .section{
+  padding-bottom:40rpx;
+}
+#music-source{
+  text-align: center;
+}
+label{
+  margin-left:20rpx;
+  display: inline-block;
+}
+ radio{
+  resize: none;
+    vertical-align: middle;
+}
+#search-wd{
+  width:85%;
+  margin: 0 auto;
+  border:1px solid #fff;
+  border-radius: 10rpx;
+  height:80rpx;
+  color: #fff;
+  margin-bottom:20rpx;
+  padding-left:5%;
+}
+.input-placeholder{
+color:#ccc;
+}
+
+.searchbtn{
+  width: 60%;
+  height:75rpx;
+  line-height: 75rpx;
+  background: rgba(42,59,67,.2);
+  color:#fff;
+  border:1rpx solid #fff;
+  margin-top:55rpx;
+  letter-spacing: 4px;
+
+}
+.music_list{
+  position: absolute;
+  top:590rpx;
+  width: 100%;
+  height:100%;
+}
+.list-item{
+  width:100%;
+  border-bottom:1px solid #666;
+  background: #333;
+  color: #999;
+  padding:10rpx 0;
+  margin: 0 auto;
+}
+.headfix{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
 }
