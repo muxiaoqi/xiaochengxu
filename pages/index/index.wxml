@@ -10,29 +10,37 @@
   <view class="usermotto">
     <text class="user-motto">{{}}</text>
   </view> -->
-
-  <form bindsubmit='formSubmit' bindreset='formReset'>
-    <view class='section'>
-      <input type="text" name="wd" id="search-wd" placeholder="搜索歌手、歌名、专辑" autofocus required />
+<view class="headfix">
+  <view>
+  <image src="../../images/pic1.jpg" mode="aspectFill" class="banner"></image>
+  </view>
+  <view  class="form">
+      <form bindsubmit='formSubmit' bindreset='formReset'>
+        <view class='section'>
+          <input type="text" name="wd" id="search-wd" placeholder="搜索歌手、歌名、专辑" autofocus required />
+        </view>
+        <view class="section">
+          <radio-group name="source" id="music-source">
+            <label><radio value="netease"/>网易云</label>
+            <label><radio value="tencent"/>QQ</label>
+            <label><radio value="xiami"/>虾米</label>
+            <label><radio value="kugou"/>酷狗</label>
+            <label><radio value="baidu"/>百度</label>
+          </radio-group>
+        </view>
+        <view class="subBtn">
+              <button formType="submit" class="searchbtn">搜索</button>
+        </view>
+      </form>
+      </view>
     </view>
-    <view class="section">
-      <radio-group name="source" id="music-source">
-        <label><radio value="netease"/>网易云</label>
-        <label><radio value="tencent"/>QQ</label>
-        <label><radio value="xiami"/>虾米</label>
-        <label><radio value="kugou"/>酷狗</label>
-        <label><radio value="baidu"/>百度</label>
-      </radio-group>
+    <view class="music_list">
+      <block wx:for="{{artist_list}}" >
+        <view class='list-item' bindtap='play' data-id='{{item.id}}' data-source='{{item.source}}'>
+          <text class='music-name'>{{ item.name }}</text>
+          <!-- <text class='music-album'>{{ item.album }}</text>
+          <text class='auth-name'>{{ item.auth }}</text> -->
+        </view>
+      </block>
     </view>
-    <view>
-          <button formType="submit">搜索</button>
-    </view>
-  </form>
-  <block wx:for="{{artist_list}}" >
-    <view class='list-item' bindtap='play' data-id='{{item.id}}' data-source='{{item.source}}'>
-      <text class='music-name'>{{ item.name }}</text>
-      <!-- <text class='music-album'>{{ item.album }}</text>
-      <text class='auth-name'>{{ item.auth }}</text> -->
-    </view>
-  </block>
-</view>
+</view> 
