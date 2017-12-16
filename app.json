@@ -1,12 +1,35 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/me/index",
+    "pages/index/play"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#333",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"#333"
+    "navigationBarTitleText": "Music",
+    "navigationBarTextStyle": "#333"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的"
+      }
+    ]
   }
 }

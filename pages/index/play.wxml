@@ -1,0 +1,16 @@
+<!--pages/index/play.wxml-->
+<view class='userinfo'>
+  <text bindtap='navigateBack'> Back </text> 
+</view>
+<view class="userinfo">
+    <block wx:if="{{hasUserInfo}}">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+</view>
+
+<view class="userinfo">
+    <view class="page-section page-section-gap" style="text-align: center;">
+      <audio style="text-align: left" src="{{musicUrl}}" poster="{{poster}}" name="{{name}}" author="{{author}}" action="{{audioAction}}" controls></audio>
+    </view>
+</view>

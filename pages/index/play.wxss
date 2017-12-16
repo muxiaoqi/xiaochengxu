@@ -1,0 +1,40 @@
+/* pages/index/play.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fce8b3;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.page-body {
+  width: 100%;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.page-section{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}

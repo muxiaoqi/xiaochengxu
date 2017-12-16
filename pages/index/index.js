@@ -22,7 +22,6 @@ Page({
     })
   },
   onLoad: function () {
-    console.log(this.data.artist_list)
     var that = this;
     this.innerAudioContext = wx.createInnerAudioContext()
     if (app.globalData.userInfo) {
