@@ -1,7 +1,5 @@
 <!--pages/index/play.wxml-->
-<view class='userinfo'>
-  <text bindtap='navigateBack'> Back </text> 
-</view>
+
 <view class="userinfo">
     <block wx:if="{{hasUserInfo}}">
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
@@ -11,6 +9,23 @@
 
 <view class="userinfo">
     <view class="page-section page-section-gap" style="text-align: center;">
-      <audio style="text-align: left" src="{{musicUrl}}" poster="{{poster}}" name="{{name}}" author="{{author}}" action="{{audioAction}}" controls></audio>
+      <audio style="text-align: left" src="{{musicUrl}}" poster="{{poster}}" name="{{name}}" author="{{author}}" action="{{audioAction}}" controls id='myAudio' bindtimeupdate="scrollLyc"></audio>
+      <!-- <button type="primary" bindtap="audioPlay">播放</button>
+      <button type="primary" bindtap="audioPause">暂停</button>
+      <button type="primary" bindtap="audioStart">回到开头</button> -->
     </view>
 </view>
+
+<view class='section'>
+  <view class='setction_title'>歌词</view>
+  <scroll-view scroll-y style='height: 200rpx' scroll-into-view="{{toView}}">
+    <view wx:for="{{musicLyric}}" wx:for-index="idx" wx:for-item="item" wx:key="">
+      <text id='lyc_{{idx}}' class='lrc-item'>{{item}}</text>
+    </view>
+    
+  </scroll-view>
+</view>
+
+<!-- <view id='lyric' wx:for="{{musicLyric}}" wx:for-index="idx" wx:for-item="item" wx:key="">
+  <text data-no='{{idx}}' class='lrc-item'>{{item}}</text>
+</view> -->

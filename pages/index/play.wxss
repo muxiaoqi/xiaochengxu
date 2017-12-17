@@ -14,16 +14,7 @@
 
 .userinfo-nickname {
   color: #fce8b3;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-
-.page-body {
-  width: 100%;
-  flex-grow: 1;
-  overflow-x: hidden;
+  margin-bottom: 15rpx;
 }
 
 .page-section{
