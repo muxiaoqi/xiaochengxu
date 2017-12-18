@@ -29,3 +29,23 @@
   box-sizing: border-box;
   padding: 0 30rpx;
 }
+
+.section{
+  width: 80%;
+  margin: 0px auto;
+}
+
+.section_title{
+  margin-top:10px 0px;
+  text-align: center;
+}
+
+.section_body{
+  height: 700rpx;
+  color: #3cc51f;
+  font-size: 30rpx;
+}
+
+.active{
+  color:#fce8b3;
+}

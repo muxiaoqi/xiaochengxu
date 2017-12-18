@@ -17,15 +17,10 @@
 </view>
 
 <view class='section'>
-  <view class='setction_title'>歌词</view>
-  <scroll-view scroll-y style='height: 200rpx' scroll-into-view="{{toView}}">
+  <view class='section_title'>歌词</view>
+  <scroll-view scroll-y scroll-into-view="{{toView}}" class='section_body'>
     <view wx:for="{{musicLyric}}" wx:for-index="idx" wx:for-item="item" wx:key="">
-      <text id='lyc_{{idx}}' class='lrc-item'>{{item}}</text>
+      <text id='lyc_{{idx}}' class="lrc-item {{current_lyric == idx ? 'active' : ''}}">{{item}}</text>
     </view>
-    
   </scroll-view>
 </view>
-
-<!-- <view id='lyric' wx:for="{{musicLyric}}" wx:for-index="idx" wx:for-item="item" wx:key="">
-  <text data-no='{{idx}}' class='lrc-item'>{{item}}</text>
-</view> -->

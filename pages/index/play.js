@@ -18,7 +18,8 @@ Page({
     name: '',
     author: '',
     musicLyric: {},
-    toView: ''
+    toView: '',
+    current_lyric: ''
   },
 
   /**
@@ -70,7 +71,7 @@ Page({
       success: function (e) {
         if (e.data.lyric) {
           var lyricObj = '';
-          console.log(e.data.lyric)
+          // console.log(e.data.lyric)
           lyricObj = that.parseLyric(e.data.lyric);
           that.setData({
             musicLyric: lyricObj
@@ -171,7 +172,8 @@ Page({
     // console.log(e)
     time = parseInt(e.detail.currentTime);
     this.setData({
-      'toView': 'lyc_'+time
+      'toView': 'lyc_'+time,
+      'current_lyric': time
     })
   }
 })
