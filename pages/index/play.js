@@ -1,5 +1,6 @@
 // pages/index/play.js
 const app = getApp()
+const backgroundAudioManager = wx.getBackgroundAudioManager()
 var mkPlayer = {
   api: 'https://iquanzi.wang/music/api.php',
 };
@@ -19,7 +20,8 @@ Page({
     author: '',
     musicLyric: {},
     toView: '',
-    current_lyric: ''
+    current_lyric: '',
+    lastLyric: ''
   },
 
   /**
@@ -59,7 +61,12 @@ Page({
       success: function (e) {
         that.setData({
           musicUrl: e.data.url
-        })
+        });
+        //  后台播放
+        backgroundAudioManager.title = that.data.name
+        backgroundAudioManager.epname = that.data.name
+        backgroundAudioManager.singer = that.data.author
+        backgroundAudioManager.src = that.data.musicUrl
       }
     })
     // 获取歌词信息
@@ -76,12 +83,30 @@ Page({
           that.setData({
             musicLyric: lyricObj
           })
+          backgroundAudioManager.onTimeUpdate(function () {
+            
+            if (lyricObj === '') return false;
+            var time = 0;
+            time = parseInt(backgroundAudioManager.currentTime);
+            
+            if (lyricObj === undefined || lyricObj[time] === undefined) return false;  // 当前时间点没有歌词
+            if (that.data.lastLyric == time) return true;  // 歌词没发生改变
+            
+            that.data.lastLyric = time;  // 记录方便下次使用
+
+            that.setData({
+              'toView': 'lyc_' + time,
+              'current_lyric': time
+            })
+          })
         }
       },
       error: function (XMLHttpRequest, textStatus, errorThrown) {
         console.error(XMLHttpRequest + textStatus + errorThrown);
       }
     })
+
+    
   },
 
   /**
@@ -90,6 +115,7 @@ Page({
   onReady: function () {
     // 使用 wx.createAudioContext 获取 audio 上下文 context
     this.audioCtx = wx.createAudioContext('myAudio')
+    
   },
 
   audioPlay: function () {
@@ -169,7 +195,7 @@ Page({
 
   scrollLyc: function (e) {
     var time = 0;
-    // console.log(e)
+    //  console.log(e)
     time = parseInt(e.detail.currentTime);
     this.setData({
       'toView': 'lyc_'+time,

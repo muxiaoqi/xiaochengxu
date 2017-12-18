@@ -17,7 +17,7 @@
   <view  class="form">
       <form bindsubmit='formSubmit' bindreset='formReset'>
         <view class='section'>
-          <input type="text" name="wd" id="search-wd" placeholder="搜索歌手、歌名、专辑" autofocus required />
+          <input type="text" name="wd" id="search-wd" placeholder="搜索歌手、歌名、专辑" value='jay' autofocus required />
         </view>
         <view class="section">
           <radio-group name="source" id="music-source">
