@@ -150,3 +150,6 @@ color:#ccc;
   z-index: 10;
   width: 100%;
 }
+navigator{
+  font-size: 35rpx;
+}

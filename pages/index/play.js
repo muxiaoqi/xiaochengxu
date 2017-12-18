@@ -194,11 +194,18 @@ Page({
   },
 
   scrollLyc: function (e) {
+
+    if (this.data.musicLyric === '') return false;
     var time = 0;
-    //  console.log(e)
     time = parseInt(e.detail.currentTime);
+
+    if (this.data.musicLyric === undefined || this.data.musicLyric[time] === undefined) return false;  // 当前时间点没有歌词
+    if (this.data.lastLyric == time) return true;  // 歌词没发生改变
+
+    this.data.lastLyric = time;  // 记录方便下次使用
+
     this.setData({
-      'toView': 'lyc_'+time,
+      'toView': 'lyc_' + time,
       'current_lyric': time
     })
   }

@@ -36,7 +36,9 @@
     </view>
     <view class="music_list">
       <block wx:for="{{artist_list}}" wx:key="">
+      <view class='list-item'>
        <navigator url="../index/play?id={{item.id}}&source={{item.source}}&author={{item.artist}}&name={{item.name}}&album={{item.album}}&lyric_id={{item.lyric_id}}">{{ item.name }}</navigator>
+      </view>
         <!-- <view class='list-item' bindtap='play' data-id='{{item.id}}' data-source='{{item.source}}'>
           <text class='music-name'>{{ item.name }}</text>
           <!-- <text class='music-album'>{{ item.album }}</text>
