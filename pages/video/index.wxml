@@ -1,0 +1,10 @@
+<!--pages/video/index.wxml-->
+
+<view class="section tc" style='width:90%; margin: 5px auto; text-align:center;'>
+  <video id="myVideo" src="https://iquanzi.wang/video/yuanban.MP4" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  <view class="btn-area">
+    <!-- <button bindtap="bindButtonTap">获取视频</button> -->
+    <input bindblur="bindInputBlur" placeholder='输入弹幕'/>
+    <button bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>

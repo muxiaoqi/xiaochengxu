@@ -1,11 +1,11 @@
 <!--pages/index/play.wxml-->
 
-<view class="userinfo">
+<!-- <view class="userinfo">
     <block wx:if="{{hasUserInfo}}">
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-</view>
+</view> -->
 
 <view class="userinfo">
     <view class="page-section page-section-gap" style="text-align: center;">

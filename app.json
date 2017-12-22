@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/me/index",
-    "pages/index/play"
+    "pages/index/play",
+    "pages/video/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#333",
-    "navigationBarTitleText": "Music",
+    "navigationBarTitleText": "音乐",
     "navigationBarTextStyle": "#333"
   },
   "tabBar": {
@@ -23,8 +24,8 @@
         "text": "搜索"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/video/index",
+        "text": "视频"
       },
       {
         "pagePath": "pages/me/index",
