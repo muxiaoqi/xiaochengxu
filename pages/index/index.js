@@ -3,7 +3,7 @@
 const app = getApp()
 var mkPlayer = {
   api: 'https://iquanzi.wang/music/api.php',
-  loadcount: 20,
+  loadcount: 100,
   method: "POST",
   defaultlist: 3,
 };
@@ -50,7 +50,18 @@ Page({
         }
       })
     }
-
+    // wx.request({
+    //     url: 'https://tainiu.51cto.com/api/article/getList',
+    //     method: 'GET',
+    //     dateType: 'json',
+    //     success: function (data) {
+    //       console.log(1)
+    //         console.log(data)
+    //     },
+    //     error: function (data) {
+    //       console.log(22)
+    //     }
+    // })
   },
   getUserInfo: function(e) {
     console.log(e)
